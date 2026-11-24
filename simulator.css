@@ -1,0 +1,37 @@
+/* Keep the game workspace one viewport tall so its own dialogs stay within reach. */
+body.simulator-open {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.simulator-open .masthead {
+  flex: none;
+}
+
+.simulator-open main,
+.simulator-room,
+#simulatorHost {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+.simulator-open footer {
+  display: none;
+}
+
+.simulator-room:focus {
+  outline: none;
+}
+
+#simulatorFrame {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}

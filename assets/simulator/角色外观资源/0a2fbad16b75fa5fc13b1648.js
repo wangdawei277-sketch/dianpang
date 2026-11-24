@@ -1,0 +1,1 @@
+window.ForeverAssetStore.accept("0a2fbad16b75fa5fc13b1648","application/octet-stream",true,"H4sIAAAAAAAACgv29vRjoAAAAFuruSVAAAAA");

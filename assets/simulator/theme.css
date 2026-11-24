@@ -1,0 +1,128 @@
+/* 点胖之家内嵌版。工具区沿用站点青蓝色纸面，游戏肖像、装备和天赋图标保留原画。 */
+:root {
+  color-scheme: light;
+  --gold: #244552;
+  --oldgold: #43616b;
+  --muted: #506674;
+  --stone: #afc5cc;
+  --green: #23623e;
+  --ink: #213b49;
+  --bg: #f1fbfd;
+  --line: #bed4da;
+  color: var(--ink);
+}
+html { background: #fff; }
+body {
+  background: linear-gradient(180deg, transparent 0%, rgb(255 255 255 / .44) 27%, rgb(255 255 255 / .89) 59%, #fff 88%),
+    linear-gradient(103deg, #a4e9ec, #c2e0f5);
+  background-repeat: no-repeat;
+  background-size: 100% max(430px, 76vh);
+  background-color: #fff;
+}
+body::before { content: none; }
+.mast { padding-block: 20px 16px; }
+.mast .brand b { color: #1c3c4b; text-shadow: none; }
+.brand small, .model-label { color: var(--muted); }
+#crest, .portrait { border: 2px solid #fff; box-shadow: 0 0 0 1px #92b4bf; flex: none; }
+button, .mast nav button {
+  color: #254355; border: 1px solid #abccd4; border-radius: 5px;
+  background: #fff; box-shadow: none;
+}
+button:hover, .mast nav button:hover { color: #12515f; border-color: #6ba0ac; filter: none; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline-color: #13717c; outline-offset: 2px;
+}
+a { color: #14616e; }
+.frame, dialog {
+  min-width: 0; background: #fff; color: var(--ink); border: 1px solid #a8c8d1; border-radius: 9px;
+  box-shadow: 0 4px 15px rgb(34 80 91 / .09);
+}
+.panel-head {
+  background: linear-gradient(105deg, #e8fafa, #edf5fc);
+  border-bottom: 1px solid var(--line); border-radius: 8px 8px 0 0; box-shadow: none;
+}
+.panel-head h1, .panel-head h2 { color: #21414e; text-shadow: none; }
+.head-icon, .tinyicon { border-color: #76949c; border-radius: 3px; }
+.edit-row, .mode-tabs { background: #f3f9fb; }
+.pane-tabs, .mode-tabs, .tree-nav { border-color: var(--line); }
+.pane-tabs button, .mode-tabs button, .tree-nav button {
+  color: #46626e; border-color: #c6dce1; background: #f6fbfc; box-shadow: none;
+}
+.on, .active, .pane-tabs .active, .mode-tabs .active, .tree-nav .on {
+  background: #d6eef1; color: #174b55; border-color: #76a6b1; box-shadow: inset 0 -2px #438693;
+}
+.report-foot, .baseline-row, .buff-strip, .library-pages, .equipstatus, .loot-row, .metrics td, .metrics th, .delta { border-color: var(--line); }
+.statcol h3, .metrics thead {
+  background: linear-gradient(to right, #e7f5f6, #f6fafc); color: #364f5b; border-color: var(--line);
+}
+.statcol>div, .metrics th, .metrics thead th, .buff-strip b { color: #425e69; }
+.statcol b { color: #255d44; }
+.scenario-summary, .diffs i { color: var(--muted); }
+.scenario-summary b, .diffs b { color: var(--ink); }
+.resultbox {
+  background: linear-gradient(115deg, #e8f6f6, #f5faff); border-color: #b2cdd5; border-radius: 5px; box-shadow: none;
+}
+.badge { color: #36616e; background: #eff9fb; border-color: #a9c6d0; }
+.bB { color: #8b2941; background: #fff1f2; border-color: #e2b4bd; }
+.meter-track { background: #d9e9ed; border-color: #bad0d6; box-shadow: none; }
+.mA { background: linear-gradient(90deg, #467886, #6198a3); }
+.mB { background: linear-gradient(90deg, #9d3148, #c95068); }
+.meter-row>b, .common { color: var(--ink); }
+.gain, .uncommon { color: #286739!important; }
+.loss { color: #a52e42; }
+.rare { color: #245c99; }
+.epic { color: #7c3499; }
+.legendary { color: #984a0c; }
+.section-title small { border-color: #b4c9cd; color: #49616e; }
+.red, .red:hover, .close, .close:hover { background: #af3045; color: #fff; border-color: #97273a; }
+select, input, textarea {
+  background: #fff; color: var(--ink); border-color: #a9c5cd; border-radius: 4px; box-shadow: none;
+}
+label, .buff-check b { color: #36525e; }
+.buff-check small { color: #456443; }
+.buff-row.selected { background: #ebf6f1; }
+.buff-row, #buffRows { border-color: var(--line); }
+.buff-row summary { color: #4e626d; }
+.buff-check>input { accent-color: #276977; }
+.trait { color: #3f5a5f; border-color: #bad3d7; background: #eff8f7; }
+.trait p { color: var(--ink); }
+.tree-nav small { color: #506671; }
+#buffRows, .loot-list { scrollbar-color: #a0bac2 #f1f7f8; }
+dialog { box-shadow: 0 18px 60px rgb(24 62 74 / .26); }
+dialog::backdrop { background: rgb(22 53 62 / .48); }
+#notice { color: #fff; background: #214d5b; border-color: #55909a; border-radius: 5px; }
+#hoverTip { color: #f1f0e9; background: #172128f7; border-color: #899a92; }
+#hoverTip h3, #hoverTip .gold { color: #eed089; }
+#hoverTip .common { color: #f0eadb; }
+#hoverTip .rare { color: #83b7f0; }
+#hoverTip .epic { color: #d19af3; }
+#hoverTip .legendary { color: #f1b572; }
+#hoverTip .uncommon, #hoverTip .gain { color: #a5df84!important; }
+#hoverTip .poor, #hoverTip .muted { color: #b9c6c6; }
+.gear-slot { background: #202825; }
+.figure { border-color: #556c70; border-radius: 4px; }
+.talent-grid { border-radius: 4px; }
+.node:hover { color: #fff2c8; }
+.loot-row .item-summary:hover { background: #eef8fa; }
+@media (max-width: 710px) {
+  .mast { padding: 15px 10px 12px; }
+}
+@media (max-width: 430px) {
+  .mast { flex-wrap: wrap; gap: 8px; }
+  .mast .brand { gap: 7px; }
+  .mast .brand b { font-size: 18px; }
+  .mast nav { flex-wrap: wrap; }
+  #app { padding-inline: 7px; }
+  .edit-row, .report-foot, .resulthead, .inline-nav, .baseline-row, .library-pages { flex-wrap: wrap; }
+  .pane-tabs button, .mode-tabs button { min-width: 0; padding: 7px 10px; }
+  .mode-tabs { gap: 3px; }
+  .paper-body, .lib-body, .talent-body, .report-body { padding-inline: 9px; }
+  .attributes { gap: 6px; }
+  .statcol>div { gap: 3px; }
+  .buff-strip { flex-wrap: wrap; }
+  .quickpick { flex-wrap: wrap; }
+  .section-title, .resulthead { gap: 5px; }
+  .library-pages { gap: 6px; }
+  .library-pages button { padding: 5px 7px; }
+  #dialogBody { padding-inline: 12px; }
+}

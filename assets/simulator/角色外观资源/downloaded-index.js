@@ -1,0 +1,1 @@
+window.WOW_DOWNLOADED_ASSET_FILES={"m2/137462.m2":"dcfc485e8d536f9454facf36.js","meta/armor/1/737427.json":"9d98d01215a0041945dcd9bd.js","meta/character/1.json":"a153320ca5350fbf3e67f6e0.js","skin/484261.skin":"419d482f50e840f719ab537a.js","textures/137465.webp":"09b2f6a03c99e06f4c126d58.js"};

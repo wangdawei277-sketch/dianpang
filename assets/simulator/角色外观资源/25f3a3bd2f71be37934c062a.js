@@ -1,0 +1,1 @@
+window.ForeverAssetStore.accept("25f3a3bd2f71be37934c062a","application/octet-stream",true,"H4sIAAAAAAAACgv29vTjZGBgcABiCSBOAGIQfwIQMwLxASj9gQECQGwBEAEHjAxMDMwMLAysDGwM7AwcyFJI8kxAFUxANSxAPiuQxQbE7EBxdjCbA0iCdDKhayYSgFwsAXYbCDgpKtmxPI3cuzyuyRaZbfjujM0EBsYGkJr//0Ekpn0TmCE0RJ6BAQABvUQ8IAEAAA==");

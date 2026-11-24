@@ -1,0 +1,1 @@
+window.ForeverAssetStore.accept("710986a26ad19c3e3ce1532a","image/webp",false,"UklGRiAAAABXRUJQVlA4TBQAAAAv/8APEAcQEREGICH8/69E9D/1Dw==");

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a4e9ec">
+  <meta name="description" content="点胖之家收藏了表情包、动图和魔兽海报，也可以给点胖试发型，搭配魔兽世界无限服角色方案。">
+  <title>点胖之家 · 点胖合拍馆</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABWElEQVR42u1aMRLCMAxrfHkPEy9ggJ2HssPAC5j4EEzZaNOQyHZraW3jixTHqVNNE0EQBEEQRFCknsH3w+nz79jL+5k8CCAW5EeMNxVg1OQ9iCDWk7YWQaIXQeEpsLGiNfqkSXsk3iKE7J18jYfsnXyNj0Qgv8RLopCf45e1J3B+3WafPY7XIXFb4iSt1V8i3ivEr9i1GOVkyJYrXhvTkxEuvgT/IT9yvOkWaN3rvbWhtQaULQARYI5MK5FRBdK0BrROvryrkf6QGoCaOCqueFp9ZMqrCIBOW0R88bj6mlnAKzEKQAEoQOheQDxVfYv44rEd3vSnMCoLUHGz5jVYTzfI+4AJ87MEeic4YjVRqV8ECN8LZK12GHkr7L4IrhVCk7jZjxELkuwF1grgxbo2KfoFmAFeDYxabhHx7OLUsMqIdysr2ickW/DzIk1S4W1yBEEQBEEQYfEF87+ugnx99RkAAAAASUVORK5CYII=">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="salon.css">
+  <link rel="stylesheet" href="simulator.css">
+  <script defer src="catalog.js"></script>
+  <script defer src="gallery.js"></script>
+  <script defer src="booth.js"></script>
+  <script defer src="hairclip-styles.js"></script>
+  <script defer src="salon-render.js"></script>
+  <script defer src="salon.js"></script>
+  <script defer src="site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#works">跳到作品相册</a>
+  <header class="masthead" id="top">
+    <div class="wrap mast-inner">
+      <a class="brand" href="#top" aria-label="点胖之家首页"><span class="camera-symbol" aria-hidden="true"><i></i></span>点胖之家</a>
+      <nav aria-label="主导航">
+        <a href="#salon">点胖发型馆</a>
+        <a href="#simulator">角色模拟器</a>
+        <a href="#booth">合拍馆</a><a href="#works">作品相册 <span aria-hidden="true">↘</span></a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="booth" aria-labelledby="boothTitle">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <h1 id="boothTitle"><span>点胖<span class="heart-flourish" aria-hidden="true">♡</span></span><strong>合拍馆</strong></h1>
+          <p>点胖的表情包、动图和魔兽海报都在这儿。<br class="desktop-break">挑一张喜欢的，带回聊天框。</p>
+          <a href="#works" class="primary-link">翻开作品相册 <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="booth-area">
+          <div class="photo-stack" id="photoStack" data-scene="ready">
+            <div class="paper-back" aria-hidden="true"></div>
+            <div class="photo-print">
+              <div class="stage" role="img" aria-label="两个点胖穿着对称的棒球衫，各举起一只手在头顶上方合成爱心，另一只手分别搭在自己的腰前" id="portraitStage">
+                <div class="studio-backdrop" aria-hidden="true"></div>
+                <div class="actors" aria-hidden="true">
+                  <img id="actorLeft" class="actor actor-left" alt="" fetchpriority="high">
+                  <img id="actorRight" class="actor actor-right" alt="" fetchpriority="high">
+                </div>
+                <img class="game-portrait" id="gamePortrait" alt="" decoding="async">
+                <div class="photo-flash" id="photoFlash" aria-hidden="true"></div>
+                <div class="viewfinder" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="print-foot"><span class="status-line"><i aria-hidden="true"></i><span id="sceneLabel">双人合拍</span></span><span class="print-caption" id="printCaption">点胖 × 点胖</span></div>
+            </div>
+          </div>
+          <div class="booth-controls" aria-label="合拍开场控制">
+            <button id="replay" type="button"><b aria-hidden="true">↻</b> <span>再拍一次</span></button>
+            <span class="controls-sep" id="controlsSep" aria-hidden="true"></span>
+            <button id="skipIntro" type="button">跳过开场 <span aria-hidden="true">→</span></button>
+          </div>
+          <span class="sr-only" id="sceneAnnounce" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="works" aria-labelledby="galleryTitle">
+      <div class="wrap">
+        <div class="collection-head"><h2 id="galleryTitle">作品相册</h2><span id="resultCount" aria-live="polite"></span></div>
+        <div class="filters" aria-label="作品分类" role="group">
+          <button type="button" class="filter is-active" data-category="all" aria-pressed="true">全部作品</button>
+          <button type="button" class="filter" data-category="sticker" aria-pressed="false">表情包</button>
+          <button type="button" class="filter" data-category="motion" aria-pressed="false">动图</button>
+          <button type="button" class="filter" data-category="poster" aria-pressed="false">魔兽海报</button>
+        </div>
+        <div class="work-grid" id="workGrid"></div>
+        <noscript>请开启 JavaScript 查看作品和下载原图。</noscript>
+      </div>
+    </section>
+    <section class="salon" id="salon" aria-labelledby="salonTitle" hidden>
+      <div class="wrap">
+        <div class="salon-heading">
+          <h1 id="salonTitle" tabindex="-1">点胖<span>发型馆</span></h1>
+          <p>试试 HairCLIP 的 44 款发型，或回看点胖原有的 6 款造型。</p>
+        </div>
+
+        <div class="salon-desk">
+          <div class="salon-photo-column" id="tryOn">
+            <figure class="salon-print">
+              <div class="salon-portrait">
+                <canvas id="hairCanvas" width="512" height="512" role="img" aria-label="点胖的发型试照"></canvas>
+              </div>
+              <figcaption><strong id="hairPrintTitle">圆蓬非洲卷</strong><span id="hairPrintState">试发照</span></figcaption>
+            </figure>
+            <div class="salon-photo-actions">
+              <button type="button" class="salon-plain-button" id="hairCompare" aria-pressed="false">对比原生短发</button>
+              <button type="button" class="salon-save" id="hairSave" disabled>保存试发照 <span aria-hidden="true">↓</span></button>
+            </div>
+            <p class="salon-status" id="hairStatus" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="salon-panel">
+            <div class="salon-panel-head"><button id="hairMiniButton" class="salon-mini" type="button" aria-label="查看当前试发大图"><canvas id="hairMiniCanvas" width="112" height="112" aria-hidden="true"></canvas></button><h2>造型参数</h2><button type="button" class="salon-reset" id="hairReset">重置参数</button></div>
+            <div class="salon-tabs" role="tablist" aria-label="造型参数类别">
+              <button type="button" role="tab" id="tabCut" aria-selected="true" aria-controls="cutPanel">发型结构</button>
+              <button type="button" role="tab" id="tabColor" aria-selected="false" aria-controls="colorPanel" tabindex="-1">发色与染法</button>
+              <button type="button" role="tab" id="tabTexture" aria-selected="false" aria-controls="texturePanel" tabindex="-1">蓬松与光泽</button>
+            </div>
+            <div id="cutPanel" class="salon-tab-panel" role="tabpanel" aria-labelledby="tabCut">
+              <div class="salon-field-row salon-series-row">
+                <label class="salon-field"><span>发型系列</span><select id="hairSeries"><option value="hairclip">HairCLIP · 44 款</option><option value="original">点胖馆藏 · 6 款</option></select></label>
+                <label class="salon-field"><span>发型款式</span><select id="hairStyle"></select></label>
+              </div>
+              <div class="salon-field-row hair-structure">
+                <label class="salon-field"><span>长度</span><select id="hairLength"></select></label>
+                <label class="salon-field"><span>卷曲度</span><select id="hairCurl"></select></label>
+                <label class="salon-field"><span>两侧修剪</span><select id="hairSides"></select></label>
+              </div>
+              <div class="salon-field-row hair-structure">
+                <label class="salon-field"><span>刘海</span><select id="hairFringe"></select></label>
+                <label class="salon-field"><span>分缝</span><select id="hairPart"></select></label>
+                <label class="salon-field"><span>扎发</span><select id="hairTie"></select></label>
+              </div>
+              <p class="salon-help">选择结构后会试用相符的发型，并在下方列出匹配款。组合冲突时优先使用最近选择的条件。</p>
+              <div class="salon-match-bar" id="hairMatchBar" hidden><span id="hairMatchDetails" role="status"></span><button type="button" id="hairClearMatch">清除条件</button></div>
+            </div>
+            <div id="colorPanel" class="salon-tab-panel" role="tabpanel" aria-labelledby="tabColor" hidden>
+              <label class="salon-field"><span>染色方式</span><select id="hairMode">
+                <option value="original">样片原色</option><option value="solid">纯色</option><option value="gradient">渐变</option><option value="streaks">挑染</option><option value="tips">发尾染</option>
+              </select></label>
+              <div class="salon-color-block">
+                <div class="salon-color-head"><span id="primaryText">主色</span><label class="custom-color">自定义 <input id="hairPrimary" type="color" value="#82553C" aria-label="自定义主色"></label></div>
+                <div id="hairSwatches" class="salon-swatches" role="group" aria-labelledby="primaryText"></div>
+              </div>
+              <div class="salon-color-block" id="hairSecondaryRow" hidden>
+                <div class="salon-color-head"><span id="secondaryText">辅色</span><label class="custom-color">自定义 <input id="hairSecondary" type="color" value="#CCAA8D" aria-label="自定义辅色"></label></div>
+                <div id="hairSecondarySwatches" class="salon-swatches" role="group" aria-labelledby="secondaryText"></div>
+              </div>
+              <fieldset class="salon-color-tuning" id="hairColorTuning">
+                <legend class="sr-only">染色微调</legend>
+                <label class="salon-slider"><span>明度 <output for="hairLightness" id="lightValue">0</output></span><input type="range" id="hairLightness" min="-40" max="40" step="1" value="0"></label>
+                <label class="salon-slider"><span>饱和度 <output for="hairSaturation" id="satValue">100%</output></span><input type="range" id="hairSaturation" min="0" max="180" step="1" value="100"></label>
+              </fieldset>
+              <p class="salon-help" id="hairColorHelp">选择色样即可开始染发。</p>
+            </div>
+            <div id="texturePanel" class="salon-tab-panel" role="tabpanel" aria-labelledby="tabTexture" hidden>
+              <label class="salon-slider"><span>蓬松度 <output for="hairVolume" id="volumeValue">100%</output></span><input type="range" id="hairVolume" min="100" max="115" step="1" value="100"></label>
+              <label class="salon-slider"><span>光泽强度 <output for="hairGloss" id="glossValue">0%</output></span><input type="range" id="hairGloss" min="0" max="100" step="1" value="0"></label>
+            </div>
+          </div>
+        </div>
+
+        <section class="salon-library" aria-labelledby="lookbookTitle">
+          <div class="salon-library-head"><h2 id="lookbookTitle">发型样片</h2><span id="hairStyleCount"></span></div>
+          <div class="salon-library-tools">
+            <div class="salon-series-buttons" role="group" aria-label="样片系列">
+              <button type="button" data-hair-series="hairclip" aria-pressed="true">HairCLIP 44 款</button>
+              <button type="button" data-hair-series="original" aria-pressed="false">点胖馆藏 6 款</button>
+            </div>
+            <label class="salon-search"><span class="sr-only">搜索发型名称或特征</span><input type="search" id="hairQuery" placeholder="搜索中文名、英文名或特征" autocomplete="off"></label>
+          </div>
+          <button id="hairAllMatches" type="button" class="salon-clear-shelf" hidden>清除结构筛选</button>
+          <p class="salon-no-results" id="hairNoResults" hidden>没有找到匹配的样片。</p>
+          <div id="hairLookbook" class="salon-lookbook" role="group" aria-label="选择发型样片"></div>
+        </section>
+      </div>
+    </section>
+    <section class="simulator-room" id="simulator" aria-label="魔兽世界无限服角色模拟器" tabindex="-1" hidden>
+      <div id="simulatorHost"></div>
+    </section>
+  </main>
+  <footer><div class="wrap foot-inner"><a class="brand" href="#top"><span class="camera-symbol" aria-hidden="true"><i></i></span>点胖之家</a><a class="to-top" href="#top">回到顶部 ↑</a></div></footer>
+  <dialog id="viewer" aria-labelledby="viewTitle">
+    <div class="viewer-shell">
+      <button type="button" class="viewer-close" id="viewClose" aria-label="关闭预览">×</button>
+      <div class="viewer-photo"><img id="viewImage" alt=""></div>
+      <div class="viewer-details"><div><h2 id="viewTitle"></h2><p id="viewMeta"></p></div><a id="viewDownload" class="primary-link" download>下载原文件 <span aria-hidden="true">↓</span></a></div>
+      <div class="viewer-nav"><button id="viewPrevious" type="button">← 上一件</button><button id="viewNext" type="button">下一件 →</button></div>
+    </div>
+  </dialog>
+</body>
+</html>
